@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Termofinger</string>
+    <string name="app_name">Ultimate Termofinger</string>
     <string name="str_bienvenido">Bienvenido</string>
     <string name="description_logo">Logo</string>
     <string name="str_get_data">Introducir datos</string>
@@ -10,4 +10,13 @@
     <string name="str_required">Requerido</string>
     <string name="hint_sesion">Número de sesión</string>
     <string name="hint_age">Edad</string>
+    <string name="sex_masc">Masculino</string>
+    <string name="sex_fem">Femenino</string>
+    <string name="hint_sustancias">Café, tabaco, medicamento, etc.</string>
+    <string name="str_sustancias">Sustancias proactivas</string>
+    <string name="hint_date">01/06/2023</string>
+    <string name="str_sex">Sexo</string>
+    <string name="str_menstruacion">Fecha del último periodo menstrual</string>
+    <string name="hint_fever">¿Ha presentado fiebre en los ultimos días?</string>
+    <string name="str_campo_vacio">Si no, dejar vacío</string>
 </resources>

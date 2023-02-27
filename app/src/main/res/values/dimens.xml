@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="back_margin">550dp</dimen>
+    <dimen name="paragraph_dimen">100dp</dimen>
+    <dimen name="default_dimen">24dp</dimen>
+    <dimen name="switch_dimen">12dp</dimen>
+    <dimen name="image">55dp</dimen>
+    <dimen name="image_logo">100dp</dimen>
+    <dimen name="card_image_size">88dp</dimen>
+    <dimen name="common_padding_min">8dp</dimen>
+    <dimen name="common_padding_default">16dp</dimen>
+    <dimen name="card_image_cover_height">160dp</dimen>
+    <dimen name="common_padding_middle">24dp</dimen>
+    <dimen name="evidence_dimen">250dp</dimen>
+    <dimen name="title_font_dim">24sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="fragment_vertical_margin">16dp</dimen>
+</resources>

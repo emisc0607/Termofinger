@@ -1,146 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/tv_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/str_get_data"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="@dimen/common_padding_default"/>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/common_padding_middle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_data">
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_name"
-            app:helperText="@string/str_required"
-            app:startIconDrawable="@drawable/icon_person">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textCapWords" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_age"
-            app:helperText="@string/str_required">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_sesion">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/tv_data"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_padding_default"
-            android:text="@string/str_sex"/>
-        <RadioGroup
-            android:layout_width="match_parent"
+            android:layout_margin="@dimen/common_padding_default"
+            android:text="@string/str_get_data"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/common_padding_min"
-            android:layout_marginBottom="@dimen/common_padding_default"
-            android:orientation="horizontal">
-            <com.google.android.material.radiobutton.MaterialRadioButton
-                android:layout_width="0dp"
-                android:id="@+id/rbSex1"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="@dimen/common_padding_min"
-                android:button="@drawable/ic_man"
-                android:text="@string/sex_masc" />
+            android:orientation="vertical"
+            android:padding="@dimen/common_padding_middle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_data">
 
-            <com.google.android.material.radiobutton.MaterialRadioButton
-                android:layout_width="0dp"
-                android:id="@+id/rbSex2"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:button="@drawable/ic_woman"
-                android:padding="@dimen/common_padding_min"
-                android:text="@string/sex_fem" />
-
-        </RadioGroup>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/str_menstruacion"
-            app:helperText="@string/hint_date">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etFirstDate"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/secondaryDarkColor"
-                android:clickable="false"
-                android:focusable="false"
-                android:inputType="date"
-                android:maxLines="1"
-                android:textAlignment="textEnd" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:hint="@string/hint_name"
+                app:helperText="@string/str_required"
+                app:startIconDrawable="@drawable/icon_person">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/str_sustancias"
-            app:helperText="@string/hint_sustancias"
-            app:startIconDrawable="@drawable/ic_coffee">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:hint="@string/hint_age"
+                app:helperText="@string/str_required">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_fever"
-            app:helperText="@string/str_campo_vacio"
-            app:startIconDrawable="@drawable/ic_sick">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords" />
-        </com.google.android.material.textfield.TextInputLayout>
+                app:startIconDrawable="@drawable/ic_timeline"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:hint="@string/hint_sesion">
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:hint="@string/str_timepicker"
+                app:helperText="@string/hint_timepicker">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTimePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:maxLines="1"
+                    android:textAlignment="textEnd" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/str_sex" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:layout_marginBottom="@dimen/common_padding_default"
+                android:orientation="horizontal">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbSex1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/ic_man"
+                    android:checked="true"
+                    android:padding="@dimen/common_padding_min"
+                    android:text="@string/sex_masc" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbSex2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/ic_woman"
+                    android:padding="@dimen/common_padding_min"
+                    android:text="@string/sex_fem" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilMenstruacion"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:hint="@string/str_menstruacion"
+                android:visibility="gone"
+                app:helperText="@string/hint_date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMenstruacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/secondaryDarkColor"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:inputType="date"
+                    android:maxLines="1"
+                    android:textAlignment="textEnd"
+                    android:visibility="gone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/str_sustancias"
+                app:helperText="@string/hint_sustancias"
+                app:startIconDrawable="@drawable/ic_coffee">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:hint="@string/hint_fever"
+                app:helperText="@string/str_campo_vacio"
+                app:startIconDrawable="@drawable/ic_sick">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/bSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/common_padding_default"
+                android:contentDescription="@string/str_save"
+                android:src="@drawable/ic_save" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

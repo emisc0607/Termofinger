@@ -19,4 +19,10 @@
     <string name="str_menstruacion">Fecha del último periodo menstrual</string>
     <string name="hint_fever">¿Ha presentado fiebre en los ultimos días?</string>
     <string name="str_campo_vacio">Si no, dejar vacío</string>
+    <string name="str_save">Guardar</string>
+    <string name="str_add">Añadir nuevo</string>
+    <string name="str_temp_collect">Iniciar muestreo</string>
+    <string name="str_home">Inicio</string>
+    <string name="str_timepicker">Hora del último alimento</string>
+    <string name="hint_timepicker">09:00 am</string>
 </resources>

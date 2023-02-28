@@ -13,54 +13,45 @@
         android:text="@string/str_bienvenido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView"/>
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="@dimen/image_logo"
         android:layout_height="@dimen/image_logo"
+        android:layout_marginTop="@dimen/common_padding_min"
         android:background="@color/white"
-        app:srcCompat="@drawable/logo_termofinger"
+        android:contentDescription="@string/description_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/image"
-        android:contentDescription="@string/description_logo" />
-<androidx.core.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/nestedScroll"
-    android:layout_margin="@dimen/common_padding_min"
-    app:layout_constraintTop_toBottomOf="@id/tvWelcome"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toTopOf="imageUaq"
-    android:background="@color/secondaryColor"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/b_data"
-        android:src="@drawable/device_thermostat"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="@dimen/fab_margin"
-        android:contentDescription="@string/str_get_data" />
+        app:srcCompat="@drawable/logo_termofinger" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/b_temperature"
-        android:src="@drawable/icon_add_person"
+    <FrameLayout
+        android:id="@+id/hostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/imageUaq"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="@dimen/fab_margin"
-        android:contentDescription="@string/str_get_temperature" />
-<androidx.appcompat.widget.AppCompatImageView
-    android:layout_width="@dimen/card_image_size"
-    android:layout_height="@dimen/card_image_size"
-    android:id="@+id/imageUaq"
-    android:src="@drawable/logos_uaq"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageUaq"
+        android:layout_width="@dimen/card_image_size"
+        android:layout_height="@dimen/card_image_size"
+        android:src="@drawable/logos_uaq"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

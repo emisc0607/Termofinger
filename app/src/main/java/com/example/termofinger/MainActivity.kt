@@ -40,8 +40,8 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.action_home -> {
-                    binding.imageView.visibility = View.GONE
-                    binding.tvWelcome.visibility = View.GONE
+                    binding.imageView.visibility = View.VISIBLE
+                    binding.tvWelcome.visibility = View.VISIBLE
                     mFragmentManager.beginTransaction().hide(mActiveFragment).show(homeFragment)
                         .commit()
                     mActiveFragment = homeFragment

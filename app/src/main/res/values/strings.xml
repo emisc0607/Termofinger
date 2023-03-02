@@ -36,4 +36,6 @@
     <string name="str_time1">5 segundos</string>
     <string name="str_ok">OK</string>
     <string name="str_time_max_duration">Máximo 30 minutos</string>
+    <string name="str_remaining_time">Minutos restantes</string>
+    <string name="str_time_zero">0</string>
 </resources>

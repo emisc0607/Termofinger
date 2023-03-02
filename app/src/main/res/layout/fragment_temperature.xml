@@ -43,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/common_padding_min"
                 android:gravity="center"
+                android:id="@+id/tvStart"
                 android:text="@string/str_start_time" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -82,14 +83,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="0" />
+                        android:text="@string/str_time_zero" />
 
                     <TextView
                         style="@style/TextAppearance.MaterialComponents.Body2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Minutos restantes" />
+                        android:text="@string/str_remaining_time" />
                 </LinearLayout>
             </FrameLayout>
 

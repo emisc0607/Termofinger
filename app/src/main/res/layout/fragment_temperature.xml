@@ -1,14 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TemperatureFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_temp"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_padding_default"
+            android:text="@string/str_temperature"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/common_padding_middle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_temp">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/str_start_time" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:gravity="center"
+                android:text="@string/str_start_time" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/str_duration" />
+
+            <FrameLayout
+                android:layout_width="@dimen/timer_dimen"
+                android:layout_height="@dimen/timer_dimen"
+                android:layout_gravity="center">
+
+                <ProgressBar
+                    android:id="@+id/progressTimer"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/gray_progressbar_background"
+                    android:indeterminate="false"
+                    android:max="10"
+                    android:progress="10"
+                    android:progressDrawable="@drawable/secondary_progressbar_background"
+                    android:rotation="-90" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTimeLeft"
+                        style="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/TextAppearance.MaterialComponents.Body2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Minutos restantes" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilTimeAdder"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="@dimen/timer_dimen"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/str_time_max_duration"
+                app:startIconDrawable="@drawable/ic_time">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTimeAdder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                android:text="@string/str_sample" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:orientation="horizontal">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbTime1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:padding="@dimen/common_padding_min"
+                    android:text="@string/str_time1" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbTime2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/common_padding_min"
+                    android:text="@string/str_time2" />
+
+            </RadioGroup>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_default"
+                app:trackThickness="@dimen/common_padding_min" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toogleButtonTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common_padding_default">
+
+                <Button
+                    android:id="@+id/bPlay"
+                    style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_play" />
+
+                <Button
+                    android:id="@+id/bPause"
+                    style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_pause" />
+
+                <Button
+                    android:id="@+id/bRestart"
+                    style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_restart" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

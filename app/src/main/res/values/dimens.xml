@@ -14,7 +14,7 @@
     <dimen name="common_padding_default">16dp</dimen>
     <dimen name="card_image_cover_height">160dp</dimen>
     <dimen name="common_padding_middle">24dp</dimen>
-    <dimen name="evidence_dimen">250dp</dimen>
+    <dimen name="timer_dimen">250dp</dimen>
     <dimen name="title_font_dim">24sp</dimen>
     <dimen name="item_card_height">200dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->

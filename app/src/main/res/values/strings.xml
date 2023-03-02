@@ -28,4 +28,12 @@
     <string name="str_no">No</string>
     <string name="str_yes">Si</string>
     <string name="hint_question_when">¿Cuando?</string>
+    <string name="str_temperature">Toma de temperatura</string>
+    <string name="str_start_time">Hora de inicio</string>
+    <string name="str_duration">Duración de la prueba</string>
+    <string name="str_sample">Muestreo</string>
+    <string name="str_time2">10 segundos</string>
+    <string name="str_time1">5 segundos</string>
+    <string name="str_ok">OK</string>
+    <string name="str_time_max_duration">Máximo 30 minutos</string>
 </resources>

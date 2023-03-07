@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val dataFragment = DataFragment()
         val temperatureFragment = TemperatureFragment()
 
-        mActiveFragment = HomeFragment()
+        mActiveFragment = homeFragment
 
         mFragmentManager.beginTransaction()
             .add(R.id.hostFragment, temperatureFragment, TemperatureFragment::class.java.name)
@@ -42,7 +42,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.action_home -> {
                     binding.imageView.visibility = View.VISIBLE
                     binding.tvWelcome.visibility = View.VISIBLE
-                    mFragmentManager.beginTransaction().hide(mActiveFragment).show(homeFragment)
+                    mFragmentManager.beginTransaction().hide(mActiveFragment)
+                        .show(homeFragment)
                         .commit()
                     mActiveFragment = homeFragment
                     true
@@ -59,7 +60,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.action_data -> {
                     binding.imageView.visibility = View.GONE
                     binding.tvWelcome.visibility = View.GONE
-                    mFragmentManager.beginTransaction().hide(mActiveFragment).show(dataFragment)
+                    mFragmentManager.beginTransaction().hide(mActiveFragment)
+                        .show(dataFragment)
                         .commit()
                     mActiveFragment = dataFragment
                     true

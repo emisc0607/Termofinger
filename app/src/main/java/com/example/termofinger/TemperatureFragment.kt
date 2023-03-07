@@ -107,7 +107,6 @@ class TemperatureFragment : Fragment() {
             if (it.isEmpty()) {
                 Toast.makeText(requireContext(), "Enter duration time", Toast.LENGTH_SHORT).show()
             } else {
-                resetTime()
                 binding.tvTimeLeft.text = binding.etTimeAdder.text
                 timeSelected = binding.etTimeAdder.text.toString().toInt() * 60
                 binding.progressTimer.max = timeSelected

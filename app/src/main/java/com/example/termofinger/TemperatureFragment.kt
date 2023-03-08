@@ -75,7 +75,7 @@ class TemperatureFragment : Fragment() {
                 timePause()
             }
         } else {
-            Toast.makeText(requireContext(), "Enter time", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Introduzca el tiempo", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -105,7 +105,7 @@ class TemperatureFragment : Fragment() {
     private fun setTime() {
         binding.etTimeAdder.text?.let {
             if (it.isEmpty()) {
-                Toast.makeText(requireContext(), "Enter duration time", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Introduzca el tiempo", Toast.LENGTH_SHORT).show()
             } else {
                 binding.tvTimeLeft.text = binding.etTimeAdder.text
                 timeSelected = binding.etTimeAdder.text.toString().toInt() * 60
